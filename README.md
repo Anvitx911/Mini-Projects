@@ -1,5 +1,9 @@
 # 🌟 My Python Mini-Projects  
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
+
 Welcome to my repository! This repo contains **five Python projects** that showcase my skills in CLI applications, web scraping, OCR, task management, and data visualization.  
 
 ---
@@ -95,4 +99,67 @@ Collect pricing and title data for analysis, price comparison, or dataset buildi
   1. GET request to the website  
   2. Parse HTML to find all books  
   3. Extract `title` and `price`  
-  4. Save data into
+  4. Save data into `books.csv` with headers  
+
+---
+
+## 🔠 5. Letter Lift (OCR Tool)  
+
+### 📌 **Summary**  
+An **OCR (Optical Character Recognition) tool** that extracts text and individual characters from an online image using Tesseract.
+
+### 🎯 **Use Case**  
+Convert images containing text into machine-readable content, or extract letters for analysis/training.
+
+### ✨ **Key Features**  
+- 🌐 Downloads an image from a URL automatically  
+- 🖼️ Uses **Pillow (PIL)** to open and convert the image  
+- 🔍 Applies **pytesseract** OCR to extract text  
+- ✂️ Splits extracted text into individual letters for detailed processing  
+- 📝 Prints the extracted text and letters  
+
+### 🛠️ **Technical Details**  
+- **Language:** Python 3  
+- **Modules:** `requests`, `PIL` (Pillow), `pytesseract`, `io`  
+- **Process:**  
+  1. Download image from URL  
+  2. Open with `Image.open(BytesIO(...))`  
+  3. (Optional) Convert to grayscale for better OCR  
+  4. Extract text with `pytesseract.image_to_string()`  
+  5. Create list of letters by stripping newlines  
+
+---
+
+## 📊 Comparative Overview  
+
+| Project | Domain | Key Skills Shown |
+|---------|--------|------------------|
+| 🧮 **Calculator** | CLI Utility | Functions, loops, input validation |
+| ✅ **Task Manager** | CLI + File I/O | JSON persistence, modular design, date stamping, UTF-8 handling |
+| 🌍 **World Map** | Data Visualization | Pandas, Plotly, interactive choropleth |
+| 📚 **Book Scraper** | Web Scraping | Requests, BeautifulSoup, CSV export |
+| 🔠 **Letter Lift** | OCR Tool | Image download, Pillow, Tesseract OCR |
+
+---
+
+## 🚀 How to Run  
+
+```bash
+# Clone this repository
+git clone https://github.com/yourusername/yourrepo.git
+cd yourrepo
+
+# Run calculator
+python calculator.py
+
+# Run task manager
+python task_manager.py
+
+# Run world map visualization
+python world_map.py
+
+# Run book scraper
+python book_scraper.py
+
+# Run Letter Lift OCR tool
+python letter_lift.py
