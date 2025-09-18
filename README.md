@@ -1,6 +1,6 @@
 # 🌟 My Python Mini-Projects  
 
-Welcome to my repository! This repo contains **four Python projects** that showcase my skills in CLI applications, web scraping, task management, and data visualization.  
+Welcome to my repository! This repo contains **five Python projects** that showcase my skills in CLI applications, web scraping, OCR, task management, and data visualization.  
 
 ---
 
@@ -95,36 +95,4 @@ Collect pricing and title data for analysis, price comparison, or dataset buildi
   1. GET request to the website  
   2. Parse HTML to find all books  
   3. Extract `title` and `price`  
-  4. Save data into `books.csv` with headers  
-
----
-
-## 📊 Comparative Overview  
-
-| Project | Domain | Key Skills Shown |
-|---------|--------|------------------|
-| 🧮 **Calculator** | CLI utility | Functions, loops, input validation |
-| ✅ **Task Manager** | CLI + File I/O | JSON persistence, modular design, date stamping, UTF-8 handling |
-| 🌍 **World Map** | Data Visualization | Pandas, Plotly, interactive choropleth |
-| 📚 **Book Scraper** | Web Scraping | Requests, BeautifulSoup, CSV export |
-
----
-
-## 🚀 How to Run  
-
-```bash
-# Clone this repository
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
-
-# Run calculator
-python calculator.py
-
-# Run task manager
-python task_manager.py
-
-# Run world map visualization
-python world_map.py
-
-# Run book scraper
-python book_scraper.py
+  4. Save data into
