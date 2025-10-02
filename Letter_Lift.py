@@ -1,4 +1,5 @@
-pip install pytesseract pillow
+!pip install pytesseract
+# Run & Install it 
 from PIL import Image
 import pytesseract
 import requests
@@ -10,9 +11,11 @@ response = requests.get(image_path)
 response.raise_for_status()  # raise error if download failed
 # Open image from bytes
 img = Image.open(BytesIO(response.content))
-img = img.convert("L")
+img = img.convert("L")  # Convert to grayscale for better OCR results
+# Use pytesseract to extract text from the image
 text = pytesseract.image_to_string(img)
 print("Extracted Text:\n")
 print(text)
-letters = list(text.replace("\n", ""))  
+# Create a list of all letters (excluding newlines)
+letters = list(text.replace("\n", ""))
 print("\nList of all letters:\n", letters)
