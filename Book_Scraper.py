@@ -17,4 +17,4 @@ with open('books.csv', 'w', newline='', encoding='utf-8') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=['title', 'price'])
     writer.writeheader()
     writer.writerows(book_data)
-print("Data saved to books.csv")
+print("Data is saved to books.csv")
