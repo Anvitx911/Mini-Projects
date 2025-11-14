@@ -4,162 +4,223 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 
-Welcome to my repository! This repo contains **five Python projects** that showcase my skills in CLI applications, web scraping, OCR, task management, and data visualization.  
+Welcome to my repository! This repo contains six Python projects showcasing my skills in CLI applications, web scraping, OCR, task management, and data visualization
 
 ---
 
-## 🧮 1. Simple Calculator  
+🧮 1. Simple Calculator
 
-### 📌 **Summary**  
-A clean **command-line calculator** that performs basic arithmetic operations: addition, subtraction, multiplication, and division.
+📌 Summary
+A command-line calculator that performs basic arithmetic operations.
 
-### 🎯 **Use Case**  
+🎯 Use Case
 Quickly perform arithmetic operations directly from the terminal.
 
-### ✨ **Key Features**  
-- ➕ **Addition**, ➖ **Subtraction**, ✖️ **Multiplication**, ➗ **Division**  
-- 🚫 Handles **division by zero** gracefully  
-- 🔄 **Loop until exit** with user-friendly prompts  
-- ✅ **Input validation** for choices and numbers  
+✨ Key Features
 
-### 🛠️ **Technical Details**  
-- **Language:** Python 3  
-- **Modules:** Built-in (`input`, `print`)  
-- **Control Flow:** `while True` loop with `if/elif` branching  
-- **Error Handling:** `try/except` for invalid numeric input  
+Addition, subtraction, multiplication, division
 
----
+Handles division by zero
 
-## ✅ 2. Daily Task Manager  
+Loop until exit
 
-### 📌 **Summary**  
-A **CLI-based to-do manager** to create daily checklists, mark tasks complete/incomplete, and persist data between sessions.
+Input validation for choices and numbers
 
-### 🎯 **Use Case**  
-Track daily tasks, review progress, and carry forward unfinished items.
+🛠️ Technical Details
 
-### ✨ **Key Features**  
-- 📝 Add tasks interactively  
-- 🔎 Review tasks & mark **complete ✅** or **incomplete ❌**  
-- 📂 **Persistent storage** in JSON file (`my_tasks.json`)  
-- 📆 Automatic **date stamping** for task completion  
-- ♻️ Move incomplete tasks to today’s checklist  
-- 📊 Summary of all tasks  
+Language: Python 3
 
-### 🛠️ **Technical Details**  
-- **Language:** Python 3  
-- **Modules:** `json`, `os`, `datetime`, `sys`, `io`  
-- **Data Structures:** Lists + dictionaries with `{task, date}`  
-- **Persistence:** UTF-8 encoded JSON file  
-- **UI:** Menu-driven CLI with 8 options  
+Modules: Built-in
 
----
+Flow: while True with if/elif
 
-## 🌍 3. World GDP Map (Interactive Visualization)  
+Errors: try/except for invalid numbers
 
-### 📌 **Summary**  
-An **interactive choropleth map** of global GDP (2014) using Plotly and Pandas.
+✅ 2. Daily Task Manager
 
-### 🎯 **Use Case**  
-Visualize GDP across countries; great for dashboards or analytics.
+📌 Summary
+A CLI-based to-do manager that creates daily checklists and saves tasks between sessions.
 
-### ✨ **Key Features**  
-- 📡 Fetches live data from **GitHub CSV**  
-- 🗺️ Interactive **Plotly choropleth** (hover, zoom)  
-- 🎨 Custom **color scale** (‘Blues’, reversed) with dark gray borders  
-- 🔗 Annotation link to **CIA Factbook**  
+🎯 Use Case
+Track tasks, mark them complete, and carry forward unfinished work.
 
-### 🛠️ **Technical Details**  
-- **Language:** Python 3  
-- **Modules:** `pandas`, `plotly.graph_objects`  
-- **Data Source:**  
-  `https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_with_codes.csv`  
-- **Output:** `fig.show()` → opens interactive map  
+✨ Key Features
 
----
+Add tasks
 
-## 📚 4. Book Scraper  
+Mark tasks complete/incomplete
 
-### 📌 **Summary**  
-A **web scraper** that extracts book titles and prices from [Books to Scrape](http://books.toscrape.com/) and saves the data into a CSV file.
+JSON file persistence
 
-### 🎯 **Use Case**  
-Collect pricing and title data for analysis, price comparison, or dataset building.
+Automatic date stamping
 
-### ✨ **Key Features**  
-- 🌐 Scrapes book titles and prices from an online bookstore  
-- ⚡ Uses **requests** to fetch HTML and **BeautifulSoup** to parse content  
-- 📄 Stores results in `books.csv` with **CSV writer**  
-- 🔢 Prints all scraped books with their index  
+Move incomplete tasks to next day
 
-### 🛠️ **Technical Details**  
-- **Language:** Python 3  
-- **Modules:** `requests`, `bs4` (BeautifulSoup), `csv`  
-- **Process:**  
-  1. GET request to the website  
-  2. Parse HTML to find all books  
-  3. Extract `title` and `price`  
-  4. Save data into `books.csv` with headers  
+Summary of all tasks
 
----
+🛠️ Technical Details
 
-## 🔠 5. Letter Lift (OCR Tool)  
+Language: Python 3
 
-### 📌 **Summary**  
-An **OCR (Optical Character Recognition) tool** that extracts text and individual characters from an online image using Tesseract.
+Modules: json, os, datetime, sys, io
 
-### 🎯 **Use Case**  
-Convert images containing text into machine-readable content, or extract letters for analysis/training.
+Data: List of dicts {task, date}
 
-### ✨ **Key Features**  
-- 🌐 Downloads an image from a URL automatically  
-- 🖼️ Uses **Pillow (PIL)** to open and convert the image  
-- 🔍 Applies **pytesseract** OCR to extract text  
-- ✂️ Splits extracted text into individual letters for detailed processing  
-- 📝 Prints the extracted text and letters  
+UI: Menu-driven CLI with 8 options
 
-### 🛠️ **Technical Details**  
-- **Language:** Python 3  
-- **Modules:** `requests`, `PIL` (Pillow), `pytesseract`, `io`  
-- **Process:**  
-  1. Download image from URL  
-  2. Open with `Image.open(BytesIO(...))`  
-  3. (Optional) Convert to grayscale for better OCR  
-  4. Extract text with `pytesseract.image_to_string()`  
-  5. Create list of letters by stripping newlines  
+🌍 3. World GDP Map (Interactive Visualization)
 
----
+📌 Summary
+A Plotly-based choropleth map showing world GDP (2014) interactively.
 
-## 📊 Comparative Overview  
+🎯 Use Case
+Visualize GDP across countries for analytics or dashboards.
 
-| Project | Domain | Key Skills Shown |
-|---------|--------|------------------|
-| 🧮 **Calculator** | CLI Utility | Functions, loops, input validation |
-| ✅ **Task Manager** | CLI + File I/O | JSON persistence, modular design, date stamping, UTF-8 handling |
-| 🌍 **World Map** | Data Visualization | Pandas, Plotly, interactive choropleth |
-| 📚 **Book Scraper** | Web Scraping | Requests, BeautifulSoup, CSV export |
-| 🔠 **Letter Lift** | OCR Tool | Image download, Pillow, Tesseract OCR |
+✨ Key Features
 
----
+Loads live data from GitHub
 
-## 🚀 How to Run  
+Interactive map (hover, zoom)
 
-```bash
-# Clone this repository
-git clone https://github.com/yourusername/yourrepo.git
+Reversed “Blues” color scale
+
+Clean borders + annotation
+
+🛠️ Technical Details
+
+Language: Python 3
+
+Modules: pandas, plotly.graph_objects
+
+Output: Interactive map via fig.show()
+
+📚 4. Book Scraper
+
+📌 Summary
+A web scraper that extracts book titles and prices from Books to Scrape and saves them to CSV.
+
+🎯 Use Case
+Collect pricing and title data for analysis or datasets.
+
+✨ Key Features
+
+Fetches page with requests
+
+Parses HTML with BeautifulSoup
+
+Extracts titles + prices
+
+Saves to books.csv
+
+Prints indexed list of books
+
+🛠️ Technical Details
+
+Language: Python 3
+
+Modules: requests, bs4, csv
+
+Process: GET → parse → extract → save
+
+🔠 5. Letter Lift (OCR Tool)
+
+📌 Summary
+An OCR tool that extracts text and characters from an online image using Tesseract.
+
+🎯 Use Case
+Convert images into readable text or extract characters for analysis.
+
+✨ Key Features
+
+Downloads image from URL
+
+Converts to grayscale
+
+Performs OCR with pytesseract
+
+Splits text into characters
+
+Prints full text + letter list
+
+🛠️ Technical Details
+
+Language: Python 3
+
+Modules: requests, PIL, pytesseract, io
+
+Process: Download → open → grayscale → OCR → character list
+
+🔍 6. Opti-Scan (OCR)
+
+📌 Summary
+Opti-Scan is an OCR tool that downloads an online image, displays it, extracts text using Tesseract, and produces a clean list of characters. Designed for quick testing and automation inside Google Colab.
+
+🎯 Use Case
+Extract readable text from any online image and analyze each character individually — useful for preprocessing datasets, automation, and OCR experimentation.
+
+✨ Key Features
+
+Downloads an image directly from a URL
+
+Converts the image to grayscale for improved OCR accuracy
+
+Displays the processed image using Matplotlib
+
+Extracts text using pytesseract
+
+Generates a list of all extracted characters (excluding newlines)
+
+Handles errors gracefully
+
+🛠️ Technical Details
+
+Language: Python 3
+
+Modules: requests, PIL, pytesseract, io, matplotlib
+
+Process:
+
+Install OCR dependencies
+
+Download image from given URL
+
+Convert to grayscale
+
+Display using plt.imshow()
+
+Extract text with Tesseract
+
+Create character list
+
+📊 Comparative Overview
+Project	Domain	Key Skills Shown
+🧮 Calculator	CLI Utility	Functions, loops, input validation
+
+✅ Task Manager	CLI + File I/O	JSON persistence, menu UI, date handling
+
+🌍 World Map	Data Visualization	Plotly, Pandas, interactive mapping
+
+📚 Book Scraper	Web Scraping	Requests, BeautifulSoup, CSV export
+
+🔠 Letter Lift	OCR Tool	Image handling, Tesseract OCR
+
+🔍 Opti-Scan	OCR Tool	URL-based OCR, image display, character extraction
+
+🚀 How to Run
+# Clone the repository
+git clone https://github.com/Anvitx911/Mini-Projects.git
 cd yourrepo
 
 # Run calculator
 python calculator.py
-
 # Run task manager
 python task_manager.py
-
-# Run world map visualization
+# Run world map
 python world_map.py
-
 # Run book scraper
 python book_scraper.py
-
-# Run Letter Lift OCR tool
+# Run Letter Lift
 python letter_lift.py
+# Run Opti-Scan
+python opti_scan.py
+
