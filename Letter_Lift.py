@@ -1,21 +1,26 @@
-!pip install pytesseract
-# Run & Install it 
+# Install required packages
+!apt install tesseract-ocr -y
+!pip install pytesseract pillow
 from PIL import Image
 import pytesseract
-import requests
-from io import BytesIO
-# URL of the image
-image_path = "https://pbs.twimg.com/media/GeXohg4bsAEJunP.jpg"
-# Download the image from the URL
-response = requests.get(image_path)
-response.raise_for_status()  # raise error if download failed
-# Open image from bytes
-img = Image.open(BytesIO(response.content))
-img = img.convert("L")  # Convert to grayscale for better OCR results
-# Use pytesseract to extract text from the image
+from google.colab import files
+# Upload an image
+print("Upload an image:")
+uploaded = files.upload()
+# Get the filename
+filename = list(uploaded.keys())[0]
+print("Image uploaded:", filename)
+# Open the image and convert to grayscale
+img = Image.open(filename).convert("L")
+# Extract text with Tesseract
 text = pytesseract.image_to_string(img)
-print("Extracted Text:\n")
-print(text)
-# Create a list of all letters (excluding newlines)
+# Print the extracted text
+print("\nExtracted Text:\n")
+if text.strip():
+    print(text)
+else:
+    print("(No readable text found)")
+# Create a list of characters (excluding newlines)
 letters = list(text.replace("\n", ""))
-print("\nList of all letters:\n", letters)
+print("\nList of letters:")
+print(letters)
